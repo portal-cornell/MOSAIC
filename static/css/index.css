@@ -64,12 +64,14 @@ body {
 }
 
 .publication-authors {
+  color: #b83a4b !important;
 }
 
 .conference-authors a {
   color: #b83a4b !important;
 }
 
+/* i want red color for non hyperlink next line */
 .publication-authors a {
   color: hsl(121, 100%, 36%) !important;
   /* color: hsl(204, 86%, 53%) !important; */
