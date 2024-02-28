@@ -49,7 +49,10 @@ $(document).ready(function() {
     	// Add listener to  event
     	carousels[i].on('before:show', state => {
     		console.log(state);
-        var index = (state['index']+2)
+        var index = (state['next']+1)
+        if(index == 0) {
+          index = 6
+        }
         if(index == 7) {
           index = 1
         }
@@ -58,12 +61,12 @@ $(document).ready(function() {
     	});
       carousels[i].on('after:show', state => {
         console.log(state);
-        var index = (state['index']+2)
-        if(index == 7) {
-          index = 1
+        var index = (state['index'])
+        if(index == 0) {
+          index = 6
         }
-        $('.slider-item').width("300px").css("display","flex").css("align-items","center")
-        $('.slider-item[data-slider-index='+index+']').width("550px").css("display","flex").css("align-items","center")
+        // $('.slider-item').width("300px").css("display","flex").css("align-items","center")
+        // $('.slider-item[data-slider-index='+index+']').width("550px").css("display","flex").css("align-items","center")
 
         // $('.slider-item').width("384px").css("display","flex").css("align-items","center")
         // $('.slider-item[data-slider-index='+index+']').width("550px").css("display","flex").css("align-items","center")
