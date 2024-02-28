@@ -3,6 +3,7 @@ body {
 }
 
 .footer .icon-link {
+  margin: 0 10px;
   font-size: 25px;
   color: #000;
 }
@@ -41,7 +42,14 @@ body {
 }
 
 .publication-header .hero-body {
+  padding-bottom: 1rem;
 }
+
+.hero-body {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
 
 .publication-title {
   font-family: "Google Sans", sans-serif;
@@ -73,8 +81,9 @@ body {
 
 /* i want red color for non hyperlink next line */
 .publication-authors a {
-  color: hsl(121, 100%, 36%) !important;
-  /* color: hsl(204, 86%, 53%) !important; */
+  /* color: #889bf3 !important; */
+  /* color: hsl(121, 100%, 36%) !important; */
+  color: hsl(204, 86%, 53%) !important;
 }
 
 .publication-authors a:hover {
@@ -117,26 +126,34 @@ body {
   overflow: hidden;
 }
 
-/* Hide previous and next navigation buttons */
+/* Hide previous and next navigation buttons
 .slider-navigation-previous,
 .slider-navigation-next {
   display: none;
 }
 
 /* Hide pagination (if present) */
-.slider-pagination {
+/* .slider-pagination {
   display: none;
-}
+}  */
 
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
-  /* border: 1px solid #bbb; */
-  /* border-radius: 10px; */
+  border: 1px solid #bbb; 
+  border-radius: 10px;
   padding: 0;
-  font-size: 0;
+  font-size: 0; 
+  /* width: 550px; */
 }
-
+/* .slider-item{
+  width:500px !important;
+} */
+/* make a center carousel cover 50% of width */
+/* .carousel .carousel-item.is-middle {
+  width: 10% !important;
+  border: 2px solid red !important;
+} */
 .results-carousel video {
   margin: 0;
 }
@@ -183,8 +200,19 @@ body {
 }
 
 .slider-container .slider-item .video-container {
-  height: 60vh;
+  /* height: 60vh; */
+  height: 320px !important;
 }
+
+.slider-item .video-container {
+  /* height: 60vh; */
+  height: 320px !important;
+}
+
+/* .slider-item{ */
+  /* height: 60vh; */
+  /* width: 550px !important; */
+/* } */
 
 .caption {
   text-align: center;

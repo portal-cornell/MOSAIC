@@ -30,24 +30,49 @@ $(document).ready(function() {
     });
 
     var options = {
+      initialSlide: 1,
 			slidesToScroll: 1,
 			slidesToShow: 3,
 			loop: true,
 			infinite: true,
 			autoplay: false,
 			autoplaySpeed: 3000,
+      pagination: false,
     }
 
 		// Initialize all div with carousel class
     var carousels = bulmaCarousel.attach('.carousel', options);
 
+    // $('.slider-item').width("550px").css("display","flex").css("align-items","center")
     // Loop on each carousel initialized
     for(var i = 0; i < carousels.length; i++) {
     	// Add listener to  event
     	carousels[i].on('before:show', state => {
     		console.log(state);
+        var index = (state['index']+2)
+        if(index == 7) {
+          index = 1
+        }
+        $('.slider-item').width("300px").css("display","flex").css("align-items","center")
+        $('.slider-item[data-slider-index='+index+']').width("550px").css("display","flex").css("align-items","center")
     	});
+      carousels[i].on('after:show', state => {
+        console.log(state);
+        var index = (state['index']+2)
+        if(index == 7) {
+          index = 1
+        }
+        $('.slider-item').width("300px").css("display","flex").css("align-items","center")
+        $('.slider-item[data-slider-index='+index+']').width("550px").css("display","flex").css("align-items","center")
+
+        // $('.slider-item').width("384px").css("display","flex").css("align-items","center")
+        // $('.slider-item[data-slider-index='+index+']').width("550px").css("display","flex").css("align-items","center")
+
+      });
+
+
     }
+
 
     // Access to bulmaCarousel instance of an element
     var element = document.querySelector('#my-element');
@@ -73,6 +98,9 @@ $(document).ready(function() {
     setInterpolationImage(0);
     $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
 
-    bulmaSlider.attach();
-
+    // bulmaSlider.attach();
+    $(".slider-navigation-next").click()
+    // $(".slider-navigation-next").click()
+    // bulmaSlider.attach();
+    // $(".slider-navigation-next").click()
 })

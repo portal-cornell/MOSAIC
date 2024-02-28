@@ -34,7 +34,7 @@
   <link rel="icon" href="./static/images/icon.jpg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script defer src="./static/js/all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
@@ -89,6 +89,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">MOSAIC: A Modular System for <br> Assistive and Interactive Cooking</h1>
+
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://lunay0yuki.github.io/">Yuki (Huaxiaoyue) Wang*</a>,</span>
@@ -127,12 +128,15 @@
           </div>
 
           <!-- write Cornell Univerity in red next line -->
-          <!-- <br> -->
-          <div class="is-size-3 publication-authors">
+          <br>
+          <!-- <hr style="height:0px; visibility:hidden;" /> -->
+          <img src="./static/images/cornell-university-logo.png" width="40%"></img>
+          <!-- <div class="is-size-3 publication-authors">
             <span class="author-block">Cornell University</span>
-          </div>
+          </div> -->
 
           <div class="column has-text-centered">
+            
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
@@ -153,16 +157,16 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+              <!-- twitter Link. -->
+              <span class="link-block">
+                <a href="https://twitter.com/sanjibac/status/1734612514351075496"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fab fa-youtube"></i>
+                      <i class="fab fa-x-twitter"></i>
                   </span>
-                  <span>Video</span>
+                  <span>Summary</span>
                 </a>
-              </span> -->
+              </span>
             </div>
 
           </div>
@@ -172,239 +176,196 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-        <img src="./static/images/Fig1.png"
-        class="interpolation-image"
-        alt="Collaborative Manipulation Tasks"/>
-      <h2 class="subtitle has-text-centered">
-        Our framework <span class="dnerf">ManiCast</span>, learns cost-aware human motion forecasts and plans with such forecasts</b>
-        for collaborative manipulation tasks.
-      </h2>
+<!-- reduce line spacing below -->
+
+
+
+<!-- Display a big video next -->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="subtitle has-text-centered">
+            MOSAIC is a modular architecture that enables multiple robots to collaboratively cook with humans.
+          </h1>
+          <div class="publication-video">
+              <video poster="" id="shiba" controls playsinline>
+                <source src="./static/videos/e2e.mp4" type="video/mp4">
+              </video>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
 
 <section class="hero is-light is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-steve">
-            <div class="video-container">
-              <video poster="" id="steve" controls muted playsinline>
-                <source src="./static/videos/check.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="caption">Reactive Stirring</div>
-          </div>
-          <div class="item item-chair-tp">
-            <div class="video-container">
-              <video poster="" id="chair-tp" controls muted playsinline>
-                <source src="./static/videos/tableset_lowerres.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="caption">Table Setting</div>
-          </div>
-          <div class="item item-shiba">
-            <div class="video-container">
-              <video poster="" id="shiba" controls muted playsinline>
-                <source src="./static/videos/handovergif_lowerres.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="caption">Object Handover</div>
-          </div>
-          <!-- <div class="item item-steve extra">
-            <div class="video-container">
-              <video poster="" id="steve" controls muted playsinline>
-                <source src="./static/videos/stirring_loweres.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="caption">Reactive Stirring</div>
-          </div> -->
-          <!-- <div class="item item-chair-tp extra">
-            <div class="video-container">
-              <video poster="" id="chair-tp" controls muted playsinline>
-                <source src="./static/videos/tableset_lowerres.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="caption">Table Setting</div>
-          </div> -->
-          <!-- <div class="item item-shiba extra">
-            <div class="video-container">
-              <video poster="" id="shiba" controls muted playsinline>
-                <source src="./static/videos/handover_lowerres.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="caption">Object Handover</div>
-          </div> -->
-          <!-- <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/fullbody.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-blueshirt">
-            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/blueshirt.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-mask">
-            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/mask.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-coffee">
-            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/coffee.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-toby">
-            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/toby2.mp4"
-                      type="video/mp4">
-            </video>
-          </div> -->
-          <script>
-            const videos = document.querySelectorAll('video');
-            let currentVideoIndex = 0;
-          
-            // Play the first video
-            videos[currentVideoIndex].play();
-          
-            videos[currentVideoIndex].addEventListener('ended', playNextVideo);
-          
-            function playNextVideo() {
-              // Pause the current video
-              videos[currentVideoIndex].pause();
-          
-              // Increment the current video index
-              currentVideoIndex++;
-              currentVideoIndex = currentVideoIndex % 3;
-          
-              // Check if there's a next video to play
-              if (currentVideoIndex < videos.length) {
-                videos[currentVideoIndex].play();
-                videos[currentVideoIndex].addEventListener('ended', playNextVideo);
-              }
-            }
-          </script>
-        
+  <div class="hero-body" has-text-centered>
+    <div class="container" >
+      <div class="column has-text-centered">
+      
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/flexibility.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/recoverability.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/safety.mp4"
+                    type="video/mp4">
+          </video>
         </div>
 
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/flexibility.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/recoverability.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/safety.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <br>
+      <h2 class="title is-3">MOSAIC enables flexibility, recoverability, and safety.</h2>
       </div>
     </div>
-  </section>
-
-  
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Seamless human-robot manipulation in close proximity relies on accurate forecasts of human motion. 
-            While there has been significant progress in learning forecast models at scale, when applied to manipulation tasks,
-            these models accrue high errors at critical transition points leading to degradation in downstream planning performance. 
-            Our key insight is that instead of predicting the most likely human motion, it is sufficient to produce forecasts that
-            capture how future human motion would affect the cost of a robot's plan. We present <span class="dnerf">ManiCast</span>, 
-            a novel framework that learns cost-aware human forecasts and feeds them to a model predictive control planner to execute 
-            collaborative manipulation tasks. Our framework enables fluid, real-time interactions between a human and a 7-DoF robot arm 
-            across a number of real-world tasks such as reactive stirring, object handovers, and collaborative table setting. 
-            We evaluate both the motion forecasts and the end-to-end forecaster-planner system against a range of learned and 
-            heuristic baselines while additionally contributing new datasets. 
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
     <!-- Dataset -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Collaborative Manipulation Dataset (CoMaD)</h2>
+        <h2 class="title is-3">Interactive Robot Skills</h2>
         <div class="publication-video">
-          <p>
-            We release a high-quality dataset collected using a motion capture system, consisting of two humans collaborating to perform daily household activities.
+          <p align="left">
+            We evaluate MOSAIC on multiple recipes, involving a range of robot skills that interact with the human user and everyday objects.
           </p>
           <br>
-          <img src="./static/images/dataset.png">
+          <img src="./static/images/skills.png">
             
         </div>
       </div>
     </div>
     <br>
-    <!-- Paper video. -->
+
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Explainer Video (1 min)</h2>
+        <h2 class="title is-3">System Overview</h2>
         <div class="publication-video">
-          <iframe src="./static/videos/Spotlight.mp4"
-                  frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+          <!-- align left -->
+          <img src="./static/images/system.png">
+          <br>
+          <p align="left">
+            The <em>Interactive Task Planner</em> module communicates with the user via natural language to decide on a recipe. 
+            It assigns subtasks to each robot accordingly. The <em>Human Motion Forecasting</em> extracts and converts the 
+            human's 2D post to 3D coordinates, which it uses to predict future human 
+            motion. Simultaneously, a VLM takes image and language as input and 
+            produces a 3D grasp pose around the object of interest. Combined, all 
+            three are taken by the execution policy of the 
+            <em>Visuomotor Skill</em> module to produce a final robot action. 
+          </p>
+            
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
-    <!-- <br><br> -->
+    <br>
 
-    
-    <!--/ Paper video. -->
-    <br><br>
-
-    <!-- Approach -->
     <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <!-- <h2 class="title is-3">ManiCast</h2> -->
-          <h3 class="title is-3">Forecasting Objective for Cost-Aware Planning</h3>
-          <div class="publication-video">
-            <img src="./static/images/forecasting_loss.jpg">
-            <div class="content">
-              <p>
-                Optimizing the above objective directly is challenging since the cost function has non-differentiable components. We approximate this objective and introduce cost-awareness with two different strategies.
-              </p>
-            </div>
-            <div class="strategy">
-              <div class="strategy-section">
-                <b>Strategy #1: Importance Sampling.</b>
-                <p>Identify "transitions" when the human comes into the robot's workspace and upsampling these regions in our dataset.</p>
-              </div>
-              <div class="strategy-section">
-                <b>Strategy #2: Dimension Weighting.</b>
-                <p>The planning cost is sensitive to forecasting errors along certain dimensions of the human pose, so we upweight them.</p>
-              </div>
-            </div>
-          </div>
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Interactive Task Planning</h2>
+        <!-- <div class="publication-video"> -->
+          <!-- align left -->
+          
+          
+          
+          <img src="./static/images/tp_approach_pic.png">
+          <br>
+          <p align="left">
+            We compare an interactive approach against using one LLM prompt, 
+            which tends to violate constraints. Given the observation, the 
+            LLM with one monolithic prompt directly assigns subtasks to robots, 
+            which violates the constraint that it must confirm with the human 
+            before assigning tasks. Meanwhile, because our approach 
+            compartmentalizes the action space and reasoning process in a 
+            behavior tree, it is able to follow a correct reasoning path and 
+            correctly confirm its subtask proposal with the user.
+          </p>
+            
+        <!-- </div> -->
+      </div>
+    </div>
+    <br>
 
-          <h3 class="title is-3">ManiCast uses a cost-aware loss to optimize planning performance</h3>
-          <div class="publication-video">
-            <img src="./static/images/loss.png">
-            <p>
-                Overview of our framework <span class="dnerf">ManiCast</span>, 
-            which learns <b>cost-aware human motion forecasts</b> and <b>plans with such forecasts</b>
-            for <b>collaborative manipulation</b> tasks. At train time, we fine-tune pre-trained 
-            human motion forecasting models on task specific datasets by upsampling 
-            transition points and upweighting joint dimensions that dominate the cost 
-            of the robot's planned trajectory. At inference time, we feed these forecasts 
-            into a model predictive control (MPC) planner to compute robot plans that 
-            are <b>reactive</b> and keep a <b>safe distance</b> from the human.
-            </p>
-          </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Visuomotor Skills</h2>
+        <div class="publication-video">
+          <!-- align left -->
+          
+          
+          
+          <img src="./static/images/vs_approach_pic.png">
+          <br>
+          <p align="left">
+            <b>Architecture Overview for Visuomotor Skills.</b> 
+            We design a simulator that mimics the real environment on which 
+            the robot is rolled-out in. An RL agent is trained to predict actions
+             given the goal position under a reward function that enforces 
+             environment constraints. At test time, the visuomotor module takes 
+             an image and natural language as input, and returns a bounding box
+              around the object of interest using OwlViT. This bounding box is 
+              passed into FastSAM, which segments out the image and 
+              back-projects it onto a point cloud to produce a 3D goal pose. 
+              This 3D goal pose is passed to the trained RL agent which produces 
+              the final action.
+          </p>
+            
         </div>
       </div>
-      <!--/ Paper video. -->
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Human Motion Forecasting</h2>
+        <div class="publication-video">
+          <!-- align left -->
+          
+          
+          
+          <img src="./static/images/hmf.png">
+          <br>
+          <p align="left">
+            <b>Real-time, Vision-based  Forecasting and Planning.</b> 
+            Given an RGB-D scene image, a pose detector extracts the human's 2D pose, which is converted to 3D coordinates using the camera's depth map. The motion forecaster predicts future human motion, which is used by the robot to plan actions.
+          </p>
+            
+        </div>
+      </div>
+    </div>
+
+    <!-- <br> -->
   </div>
 </section>
 
