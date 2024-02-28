@@ -57,7 +57,7 @@ $(document).ready(function() {
           index = 1
         }
         $('.slider-item').width("300px").css("display","flex").css("align-items","center")
-        $('.slider-item[data-slider-index='+index+']').width("550px").css("display","flex").css("align-items","center")
+        $('.slider-item[data-slider-index='+index+']').width("525px").css("display","flex").css("align-items","center")
     	});
       carousels[i].on('after:show', state => {
         console.log(state);
