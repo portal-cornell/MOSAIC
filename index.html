@@ -209,38 +209,38 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/flexibility.mp4"
+            <source src="./static/videos/recoverability.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/recoverability.mp4"
+            <source src="./static/videos/safety.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/safety.mp4"
+            <source src="./static/videos/flexibility.mp4"
                     type="video/mp4">
           </video>
         </div>
 
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/flexibility.mp4"
+            <source src="./static/videos/recoverability.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/recoverability.mp4"
+            <source src="./static/videos/safety.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/safety.mp4"
+            <source src="./static/videos/flexibility.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -273,11 +273,27 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">System Overview</h2>
-        <div class="publication-video">
+        <!-- <div class="publication-video"> -->
           <!-- align left -->
           <img src="./static/images/system.png">
           <br>
-          <p align="left">
+          <br>
+          <!-- write three bullet points next using <ul> -->
+
+          <li align="left"> The <b><em>Interactive Task Planner</em></b> module 
+            communicates with the user via natural language to decide on a 
+            recipe. </li>
+          <li align="left"> The <b><em>Human Motion Forecasting</em></b> extracts and 
+            converts the human's 2D post to 3D coordinates, which it uses to 
+            predict future human motion. </li>
+          <li align="left"> A VLM takes image and language as input and 
+            produces a 3D grasp pose around the object of interest. Combined, 
+            all three are taken by the execution policy of the 
+            <b><em>Visuomotor Skill</em></b> module to produce final robot actions. </li>
+
+          
+
+          <!-- <p align="left">
             The <em>Interactive Task Planner</em> module communicates with the user via natural language to decide on a recipe. 
             It assigns subtasks to each robot accordingly. The <em>Human Motion Forecasting</em> extracts and converts the 
             human's 2D post to 3D coordinates, which it uses to predict future human 
@@ -285,9 +301,9 @@
             produces a 3D grasp pose around the object of interest. Combined, all 
             three are taken by the execution policy of the 
             <em>Visuomotor Skill</em> module to produce a final robot action. 
-          </p>
+          </p>  -->
             
-        </div>
+        <!-- </div> -->
       </div>
     </div>
     <br>
