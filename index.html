@@ -288,15 +288,14 @@
           <br>
           <!-- write three bullet points next using <ul> -->
 
-          <li align="left"> <b>Interactive Task Planner</b>: This module 
-            communicates with the user via natural language to decide on a 
-            recipe. </li>
+          <li align="left"> <b>Interactive Task Planner</b>: Communicates with the user via natural language to decide on a recipe, delegate subtasks, 
+            and monitors recipe progress. </li>
           <li align="left"> <b>Human Motion Forecasting</b>: Extracts and 
             converts the human's 2D post to 3D coordinates, which it uses to 
             predict future human motion. </li>
-          <li align="left"> <b>Visuomotor Skill</b>: A VLM takes image and language as input and 
-            produces a 3D grasp pose around the object of interest. Combined with the human motion forecasts, 
-            all three inputs are used by the execution policy of the module to compute actions on the robot. </li>
+          <li align="left"> <b>Visuomotor Skill</b>: Produces a 3D grasp pose given image and language input, 
+            then outputs action conditioned on the grasp pose and 
+            predicted human motion.
 
           
 
@@ -327,14 +326,8 @@
           <br>
           <br>
           <p align="left">
-            <b> Tree-structured task planner vs single-prompt. </b> We compare an interactive approach against using one LLM prompt, 
-            which tends to violate constraints. Given the observation, the 
-            LLM with one monolithic prompt directly assigns subtasks to robots, 
-            which violates the constraint that it must confirm with the human 
-            before assigning tasks. Meanwhile, because our approach 
-            compartmentalizes the action space and reasoning process in a 
-            behavior tree, it is able to follow a correct reasoning path and 
-            correctly confirm its subtask proposal with the user.
+            <b> Embedding LLMs within a behavior tree. </b> LLMs can handle users natural language input, but its output can be error-prone and unconstrained. MOSAIC overcomes this challenges by embedding LLMs within a behavior tree. Each tree node partitions the LLM reasoning process, thereby reducing the complexity and potential error rate.
+            <br> <br> We compare MOSAIC's approach against using one LLM prompt, which tends to violate constraints. Given the observation, the LLM with one monolithic prompt directly assigns subtasks to robots, which violates the constraint that it must confirm with the human before assigning subtasks. Meanwhile, our approach is able to follow a correct reasoning path and correctly confirm its subtask proposal with the user.
           </p>
             
         <!-- </div> -->
@@ -375,17 +368,9 @@
           <br>
           <br>
           <p align="left">
-            <b>Architecture Overview for Visuomotor Skills.</b> 
-            We design a simulator that mimics the real environment on which 
-            the robot is rolled-out in. An RL agent is trained to predict actions
-             given the goal position under a reward function that enforces 
-             environment constraints. At test time, the visuomotor module takes 
-             an image and natural language as input, and returns a bounding box
-              around the object of interest using OwlViT. This bounding box is 
-              passed into FastSAM, which segments out the image and 
-              back-projects it onto a point cloud to produce a 3D goal pose. 
-              This 3D goal pose is passed to the trained RL agent which produces 
-              the final action.
+            <b>VLMs for perception and RL for action prediction.</b> 
+            At train time, we design a simulator that mimics the real environment. Given the goal position, an RL agent is trained to predict actions under a reward function that enforces environment constraints.
+<br> <br> At inference time, taking an image and natural language as input, the visuomotor module uses Owl-ViT to output a bounding box around the object of interest. This bounding box is passed into FastSAM, which segments out the object and back-projects it onto a point cloud to produce a 3D goal pose. This 3D goal pose is used by the trained RL agent to produce the final actions.
           </p>
             
         <!-- </div> -->
