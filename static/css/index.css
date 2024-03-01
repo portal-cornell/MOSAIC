@@ -1,6 +1,6 @@
-html, .custom-body-class {
-	position:relative;
-	overflow-x:hidden;
+html, body {
+  overflow-x: hidden;
+  position: relative;
 }
 
 body {
