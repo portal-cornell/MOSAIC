@@ -1,11 +1,11 @@
 html, body {
-  overflow-x: hidden;
-  position: relative;
+  overflow-x: hidden !important;
+  position: relative !important;
 }
 
 body {
-  overflow-x: hidden;
-  position: relative;
+  overflow-x: hidden !important;
+  position: relative !important;
   font-family: "Noto Sans", sans-serif;
 }
 
