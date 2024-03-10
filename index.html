@@ -362,17 +362,43 @@
         <!-- <div class="publication-video"> -->
           <!-- align left -->
           
+          <h3 class="title is-5">Interactive Demo: Ask the robot to pick an object of your choice </h2>
+          <div id="interactive-section">
+            <!-- change background-color to blue, red, yellow -->
+            <button id="gif1-button" class="button-salt">Pick Salt</button>
+            <button id="gif2-button" class="button-pepper">Pick Pepper</button>
+            <button id="gif3-button" class="button-relish">Pick Relish</button>
+            <br> <br>
+            <img id="gif-display" src="static/images/vs_approach/pepper.gif" alt="GIF will display here">
+          </div>
           
-          
-          <img src="./static/images/vs_approach_pic.png">
+          <script>
+            document.getElementById('gif1-button').addEventListener('click', function() {
+            document.getElementById('gif-display').src = 'static/images/vs_approach/salt.gif';
+          });
+
+          document.getElementById('gif2-button').addEventListener('click', function() {
+            document.getElementById('gif-display').src = 'static/images/vs_approach/pepper.gif';
+          });
+
+          document.getElementById('gif3-button').addEventListener('click', function() {
+            document.getElementById('gif-display').src = 'static/images/vs_approach/relish.gif';
+          });
+          </script>
+          <!-- <img src="./static/images/vs_approach_pic.png"> -->
           <br>
           <br>
           <p align="left">
             <b>VLMs for perception and RL for action prediction.</b> 
             At train time, we design a simulator that mimics the real environment. Given the goal position, an RL agent is trained to predict actions under a reward function that enforces environment constraints.
-<br> <br> At inference time, taking an image and natural language as input, the visuomotor module uses Owl-ViT to output a bounding box around the object of interest. This bounding box is passed into FastSAM, which segments out the object and back-projects it onto a point cloud to produce a 3D goal pose. This 3D goal pose is used by the trained RL agent to produce the final actions.
+<br> <br> At inference time, taking an image and natural language as input, the visuomotor module uses OWL-ViT to output a bounding box around the object of interest. This bounding box is passed into FastSAM, which segments out the object and back-projects it onto a point cloud to produce a 3D goal pose. This 3D goal pose is used by the trained RL agent to produce the final actions.
           </p>
-            
+
+          
+          <!-- Create an interactive section below with three
+             buttons corresponding to playing of one of three gifs -->
+          
+          
         <!-- </div> -->
       </div>
     </div>

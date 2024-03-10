@@ -2,6 +2,54 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
+.button-salt {
+  background-color: blue;
+  color: white;
+  /* other styles... */
+}
+
+.button-pepper {
+  background-color: red;
+  color: white;
+  /* other styles... */
+}
+
+.button-relish {
+  background-color: yellow;
+  color: white;
+  /* other styles... */
+}
+
+#interactive-section button {
+  background-color: #4CAF50; 
+  border: 2px solid black;
+  /* color: white; */
+  padding: 8px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 35px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  transition: background-color 0.3s ease;
+}
+
+/* #interactive-section button:hover {
+  background-color: #45a049;
+} */
+
+
+#interactive-section button:hover {
+  /* change color on hover */
+  background-color: #555;
+}
+
+#interactive-section button:active {
+  /* change color when button is pressed */
+  background-color: #333;
+}
+
 .footer .icon-link {
   margin: 0 10px;
   font-size: 25px;
