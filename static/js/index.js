@@ -56,8 +56,26 @@ $(document).ready(function() {
         if(index == 7) {
           index = 1
         }
-        $('.slider-item').width("300px").css("display","flex").css("align-items","center")
-        $('.slider-item[data-slider-index='+index+']').width("525px").css("display","flex").css("align-items","center")
+        // Set the width of the slider items so that they cover the width of the carousel
+
+        // $('.slider-item').width("300px").css("display","flex").css("align-items","center")
+        // $('.slider-item[data-slider-index='+index+']').width("525px").css("display","flex").css("align-items","center")
+
+        // store width of carousel in next lines
+        var width = $('.carousel').width();
+        console.log(width);
+
+        var center = width / 2;
+        var side = (width - center) / 2;
+
+        console.log(center);
+        console.log(side);
+
+        $('.slider-item').width(`${side}px`).css("display","flex").css("align-items","center")
+        // $('.slider-item').width("384px").css("display","flex").css("align-items","center")
+        $('.slider-item[data-slider-index='+index+']').width(`${center}px`).css("display","flex").css("align-items","center")
+        // $('.slider-item').width("384px").css("display","flex").css("align-items","center")
+        // $('.slider-item[data-slider-index='+index+']').width("550px").css("display","flex").css("align-items","center")
     	});
       carousels[i].on('after:show', state => {
         console.log(state);
